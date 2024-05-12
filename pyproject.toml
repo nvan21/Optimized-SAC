@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "optimized-sac"
+version = "0.1.0"
+description = "Pytorch implementation of the soft actor critic algorithm"
+authors = ["Nathan Van Utrecht"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+torch = {version = "^2.3.0+cu118", source = "torch118"}
+numpy = "^1.26.4"
+gymnasium = "^0.29.1"
+mujoco = "^3.1.5"
+
+[[tool.poetry.source]]
+name = "torch118"
+url = "https://download.pytorch.org/whl/cu118"
+priority = "explicit"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
