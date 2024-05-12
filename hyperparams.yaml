@@ -1,0 +1,6 @@
+config:
+  hidden_nodes: 256
+  hidden_layers: 2
+
+
+  

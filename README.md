@@ -3,9 +3,10 @@
 - [https://arxiv.org/pdf/1801.01290] - Original SAC paper
 - [https://arxiv.org/pdf/2007.01932] - Tuning the entropy temperature with metagradient
 - [https://arxiv.org/pdf/2112.11115] - SAC with cross-entropy policy optimization
+- [https://arxiv.org/pdf/2109.11767] - Prioritized replay buffer paper
 - [https://deepganteam.medium.com/basic-policy-gradients-with-the-reparameterization-trick-24312c7dbcd] - High level explanation of the reparameterization trick
 - [https://spinningup.openai.com/en/latest/algorithms/sac.html] - Spinningup Pseudocode
-- [https://github.com/araffin/rl-baselines-zoo] - RL Baselines zoo (useful for tuned hyperparameters on gym environments)
+- [https://github.com/DLR-RM/rl-baselines3-zoo] - RL Baselines zoo (useful for tuned hyperparameters on gym environments)
 
 # Notes
 
