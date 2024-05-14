@@ -72,5 +72,10 @@ if __name__ == "__main__":
 
     model = SAC(**hyperparams)
 
+    next_state, _ = env.reset()
     for step in model.n_timesteps:
-        print(step)
+        # Get a random action if the learning hasn't started yet
+        if model.learning_starts <= step:
+            action = env.action_space.sample()
+        else:
+            action, log_prob = model.get_action()

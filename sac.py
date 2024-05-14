@@ -34,6 +34,11 @@ class SAC:
 
         self.model_path = f"./weights/{self.env}"
 
+    def get_action(self, state):
+        action, log_prob = self.actor.sample(state)
+
+        return action, log_prob
+
     def update_parameters(self):
         pass
 
