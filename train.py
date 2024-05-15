@@ -4,6 +4,7 @@ import yaml
 import argparse
 from utils import Logger
 import time
+import numpy as np
 
 import difflib
 
@@ -54,6 +55,11 @@ if __name__ == "__main__":
 
     env = gym.make(args.env)
     env = gym.wrappers.RecordEpisodeStatistics(env)
+    env = gym.wrappers.ClipAction(env)
+    env = gym.wrappers.NormalizeObservation(env)
+    env = gym.wrappers.TransformObservation(env, lambda obs: np.clip(obs, -10, 10))
+    env = gym.wrappers.NormalizeReward(env)
+    env = gym.wrappers.TransformReward(env, lambda obs: np.clip(obs, -10, 10))
 
     with open("hyperparams.yml", "r") as f:
         hyperparams_dict = yaml.safe_load(f)
